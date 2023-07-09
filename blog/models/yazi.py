@@ -17,7 +17,7 @@ class YazılarModel (models.Model):
     kategoriler  = models.ManyToManyField(KategoriModel, related_name= 'yazi')
     #her yazının birden fazla kategorisi olabilir 
     #related name bir kategoriye ait tüm yazıları çekmek istediğimizde kullanılır
-    yazar=models.ForeignKey(User, on_delete=models.CASCADE, related_name='yazilar')
+    yazar=models.ForeignKey('account.CustomUserModel', on_delete=models.CASCADE, related_name='yazilar')
     
     class Meta:
         verbose_name= 'Yazi'
