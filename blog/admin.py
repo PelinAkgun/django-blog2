@@ -6,6 +6,7 @@ from blog.models import IletisimModel
 # Register your models here.
 admin.site.register(KategoriModel)
 
+
 class YazilarAdmin(admin.ModelAdmin):
     search_fields = ('baslik' , 'icerik')
     list_display = (
@@ -16,7 +17,7 @@ admin.site.register(YazılarModel, YazilarAdmin)
 class YorumlarAdmin ( admin.ModelAdmin):
     search_fields =('yazan__username' , )
     list_display = (
-        'yorum' , 'olusturulma_tarihi' , 'guncellenme_tarihi'
+        'yorum' , 'olusturulma_tarihi' , 'duzenlenme_tarihi'
     ) 
 admin.site.register(YorumModel, YorumlarAdmin)
 

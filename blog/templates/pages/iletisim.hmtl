@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %}Iletisim sayfası{% endblock %}
+
+{% block content %}
+    iletisim 
+{% endblock%}
