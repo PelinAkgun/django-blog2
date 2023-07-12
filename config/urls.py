@@ -12,6 +12,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('blog/iletisim/', iletisim),
     path('', include('blog.urls')) # 'blog/' vardı
     #path in icinde blog yerine '' seklinde boş bırakırsak o sayfa anasayfa olur
 ] + static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT)
